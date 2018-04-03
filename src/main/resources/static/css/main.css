@@ -1,0 +1,11 @@
+body {
+    background-image: url('../images/Airplane_background.png');
+}
+
+table, th, tr, td {
+    background-color: white;
+}
+
+p {
+    color: white;
+}

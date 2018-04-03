@@ -1,4 +1,4 @@
-var _restEndpoint = '/api/airplanes';
+var _restEndpoint = '/api/airplanes/';
 var _tableElement = $('#airplaneTable');
 var _deleteElement = $('#btndelete');
 
@@ -67,7 +67,7 @@ function openModalForObject(data,newEntry) {
             var saveData = {
                 name: _nameField.val(),
                 fuel: _fuelField.val(),
-                currentAirport: _currentAirport.val()
+                currentAirport: _currentAirportField.val()
             };
         }else{
             var saveData = {
@@ -96,7 +96,7 @@ function openModalForObject(data,newEntry) {
         _modalElement.find('#btndelete').show()
         .off('click')
         .on('click', function() {
-            var result = confirm('this action can not be undone');
+            var result = confirm('This airplane will be removed, this action can not be undone');
 
             if(result) {
                 $.ajax({
