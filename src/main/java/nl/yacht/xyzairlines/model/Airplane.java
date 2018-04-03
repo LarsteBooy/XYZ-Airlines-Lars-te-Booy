@@ -16,12 +16,24 @@ public class Airplane {
     private int fuel;
     private String presentAirport;
 
-    public Airplane(int fuel, String presentAirport) {
-        this.fuel = fuel;
-        this.presentAirport = presentAirport;
+    public Airplane() {
     }
 
-    public Airplane() {
+    //Getters and Setters
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getFuel() {
