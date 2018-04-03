@@ -15,6 +15,8 @@ public class Airplane {
     private String name;
     private int fuel;
     private String currentAirport;
+    private String typePlane;
+    private int passengers;
 
     public Airplane() {
     }
@@ -26,6 +28,22 @@ public class Airplane {
 
     public long getId() {
         return id;
+    }
+
+    public String getTypePlane() {
+        return typePlane;
+    }
+
+    public void setTypePlane(String typePlane) {
+        this.typePlane = typePlane;
+    }
+
+    public int getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(int passengers) {
+        this.passengers = passengers;
     }
 
     public String getName() {

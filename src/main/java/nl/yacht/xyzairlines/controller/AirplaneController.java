@@ -36,6 +36,12 @@ public class AirplaneController {
         this.airplaneRepository.delete(id);
     }
 
+    // Update Airplane
+//    @RequestMapping(value = "{id}", method = RequestMethod.)
+//    public Airplane update(@PathVariable long id, @RequestBody Airplane input){
+//        this.airplaneRepository.update(id, input);
+//    }
+
 
 
 }

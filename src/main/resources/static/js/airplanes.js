@@ -41,15 +41,21 @@ function openModalForObject(data,newEntry) {
     var _nameField = _modalElement.find('#name');
     var _fuelField = _modalElement.find('#fuel');
     var _currentAirportField = _modalElement.find('#currentAirport');
+    var _passengerField = _modalElement.find('#passengers');
+    var _planeTypeField = _modalElement.find('#planeType');
 
     if(!newEntry){
         _nameField.val(data.name);
         _fuelField.val(data.fuel);
         _currentAirportField.val(data.currentAirport);
+        _passengerField.val(data.passengers);
+        _planeTypeField.val(data.planeType);
     }else{
         _nameField.val("");
         _fuelField.val("");
         _currentAirportField.val("");
+        _passengerField.val("");
+        _planeTypeField.val("");
     }
 
     if(newEntry){
@@ -67,14 +73,19 @@ function openModalForObject(data,newEntry) {
             var saveData = {
                 name: _nameField.val(),
                 fuel: _fuelField.val(),
-                currentAirport: _currentAirportField.val()
+                currentAirport: _currentAirportField.val(),
+                passengers: _passengerField.val(),
+                planeType: _planeTypeField.val()
+
             };
         }else{
             var saveData = {
                 id: data.id,
                 name: _nameField.val(),
                 fuel: _fuelField.val(),
-                currentAirport: _currentAirportField.val()
+                currentAirport: _currentAirportField.val(),
+                passengers: _passengerField.val(),
+                planeType: _planeTypeField.val()
             };
         }
 
