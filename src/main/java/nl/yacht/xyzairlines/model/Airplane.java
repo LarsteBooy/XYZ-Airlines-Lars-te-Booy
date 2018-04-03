@@ -14,7 +14,7 @@ public class Airplane {
 
     private String name;
     private int fuel;
-    private String presentAirport;
+    private String currentAirport;
 
     public Airplane() {
     }
@@ -44,11 +44,11 @@ public class Airplane {
         this.fuel = fuel;
     }
 
-    public String getPresentAirport() {
-        return presentAirport;
+    public String getCurrentAirport() {
+        return currentAirport;
     }
 
-    public void setPresentAirport(String presentAirport) {
-        this.presentAirport = presentAirport;
+    public void setCurrentAirport(String currentAirport) {
+        this.currentAirport = currentAirport;
     }
 }

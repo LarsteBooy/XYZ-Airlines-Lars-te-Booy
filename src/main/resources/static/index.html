@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XYZ Airlines</title>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+
+    <!-- JQuery Datatables. Load after JQuery -->
+    <script type="text/javascript"
+            src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+
+</head>
+<body>
+
+<div class="header page-header">
+    <h1>Airplanes</h1>
+</div>
+
+<button id="addAirplaneBtn" class="btn btn-primary"> Add Airplane </button>
+<br>
+<br>
+
+<table id="airplaneTable" class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th data-data="name">Name</th>
+        <th data-data="fuel">Fuel in tons</th>
+        <th data-data="currentAirport">Current Airport</th>
+    </tr>
+    </thead>
+</table>
+
+<div id="entryModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button class="close"  data-dismiss="modal">&times;</button>
+                <h3 id="modal-title" class="modal-title">Dish</h3>
+
+            </div>
+            <div class="modal-body">
+
+                <form enctype='text/plain'>
+
+                    <div class="form-group">
+                        <label for="name">Airplane name</label>
+                        <input id="name" type="text" class="form-control" placeholder="Airplane name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fuel">Fuel</label>
+                        <input id="fuel" type="number" class="form-control" placeholder="Fuel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentAirport">Current Airport</label>
+                        <input id="currentAirport" type="text" class="form-control" placeholder="Current Airport">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+
+                <button id="btnsubmit" class="btn btn-primary">Submit</button>
+                <button id="btndelete" class="btn btn-danger">Delete</button>
+                <button id="btnclose" class="btn btn-default" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/airplanes.js"></script>
+
+</body>
+</html>
