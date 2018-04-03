@@ -74,22 +74,27 @@ function openModalForObject(data,newEntry) {
                 id: data.id,
                 name: _nameField.val(),
                 fuel: _fuelField.val(),
-                currentAirport: _currentAirport.val()
+                currentAirport: _currentAirportField.val()
             };
         }
 
 
+//        if(fuel > 0 && fuel <= 5){
+            $.ajax({
+                contentType : 'application/json',
+                url: _restEndpoint,
+                type: 'post',
+                data: JSON.stringify(saveData),
+                success: function() {
+                    _modalElement.modal('hide');
+                    reloadData();
+                },
+            });
+//        }
+//        else {
+//            alert('A plane can hold a maximum of 5 tons fuel')
+//        }
 
-        $.ajax({
-            contentType : 'application/json',
-            url: _restEndpoint,
-            type: 'post',
-            data: JSON.stringify(saveData),
-            success: function() {
-                _modalElement.modal('hide');
-                reloadData();
-            },
-        });
     });
 
     if(!newEntry){
