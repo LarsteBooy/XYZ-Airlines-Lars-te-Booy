@@ -15,7 +15,7 @@ public class Airplane {
     private String name;
     private int fuel;
     private String currentAirport;
-    private String typePlane;
+    private String planeType;
     private int passengers;
 
     public Airplane() {
@@ -30,12 +30,12 @@ public class Airplane {
         return id;
     }
 
-    public String getTypePlane() {
-        return typePlane;
+    public String getPlaneType() {
+        return planeType;
     }
 
-    public void setTypePlane(String typePlane) {
-        this.typePlane = typePlane;
+    public void setPlaneType(String planeType) {
+        this.planeType = planeType;
     }
 
     public int getPassengers() {
